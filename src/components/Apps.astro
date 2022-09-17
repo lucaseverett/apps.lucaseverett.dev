@@ -1,0 +1,48 @@
+---
+import fs from "node:fs/promises";
+const { start } = Astro.props;
+import { fileURLToPath } from "url";
+import folder from "./folder-solid.svg";
+
+const __dirname = fileURLToPath(
+  new URL(import.meta.env.DEV ? "../../" : "../", import.meta.url)
+);
+
+let list = start === "/" ? ["lucaseverett-dev", "toolbar-dial"] : [];
+
+try {
+  const results = await fs.readdir(`${__dirname}/apps${start}`);
+
+  results.forEach((folder) => {
+    list.push(folder);
+  });
+
+  list.sort();
+
+  if (start !== "/") list.unshift("../");
+} catch (err) {
+  console.log(err);
+}
+---
+
+<ul>
+  {
+    list.map((project) => {
+      const url =
+        project === "lucaseverett-dev"
+          ? "https://lucaseverett.dev"
+          : project === "toolbar-dial"
+          ? "https://toolbardial.com"
+          : project === "../"
+          ? "/"
+          : project;
+
+      return (
+        <li>
+          <img src={folder} alt="" />
+          <a href={url}>{project}</a>
+        </li>
+      );
+    })
+  }
+</ul>

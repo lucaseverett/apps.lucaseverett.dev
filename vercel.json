@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/battle-of-champions/(.*)",
+      "destination": "/battle-of-champions"
+    }
+  ],
+  "trailingSlash": true
+}

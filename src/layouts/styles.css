@@ -1,0 +1,99 @@
+@import "modern-normalize/modern-normalize.css";
+@import "inter-ui/inter.css";
+
+html {
+  line-height: 1.5;
+}
+
+body {
+  font-family: "Inter", "system-ui";
+}
+
+@supports (font-variation-settings: normal) {
+  body {
+    font-family: "Inter var", "system-ui";
+  }
+}
+
+header {
+  background-color: #2563eb;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+
+  & img {
+    width: 30px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(68deg)
+      brightness(107%) contrast(101%);
+  }
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+
+  & a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+p {
+  padding: 25px;
+}
+
+ul {
+  padding: 25px;
+  list-style: none;
+  margin: 0;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+li {
+  padding: 20px;
+  background-color: #f5f5f5;
+  white-space: nowrap;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  & a {
+    color: #000;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  & img {
+    width: 30px;
+    filter: invert(80%) sepia(6%) saturate(1474%) hue-rotate(181deg)
+      brightness(102%) contrast(106%);
+  }
+}
+
+@media only screen and (min-width: 650px) {
+  header {
+    padding: 50px;
+
+    & img {
+      width: 40px;
+    }
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+  p {
+    padding: 50px;
+  }
+
+  ul {
+    padding: 50px;
+  }
+}

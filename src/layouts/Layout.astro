@@ -1,0 +1,40 @@
+---
+import githubBrands from "./github-brands.svg";
+import "./styles.css";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lucas Everett's Apps</title>
+    <!--
+    LLLLLLLLLLL                  EEEEEEEEEEEEEEEEEEEEEE
+    L:::::::::L                  E::::::::::::::::::::E
+    L:::::::::L                  E::::::::::::::::::::E
+    LL:::::::LL                  EE::::::EEEEEEEEE::::E
+      L:::::L                      E:::::E       EEEEEE
+      L:::::L                      E:::::E             
+      L:::::L                      E::::::EEEEEEEEEE   
+      L:::::L                      E:::::::::::::::E   
+      L:::::L                      E:::::::::::::::E   
+      L:::::L                      E::::::EEEEEEEEEE   
+      L:::::L                      E:::::E             
+      L:::::L         LLLLLL       E:::::E       EEEEEE
+    LL:::::::LLLLLLLLL:::::L     EE::::::EEEEEEEE:::::E
+    L::::::::::::::::::::::L     E::::::::::::::::::::E
+    L::::::::::::::::::::::L     E::::::::::::::::::::E
+    LLLLLLLLLLLLLLLLLLLLLLLL     EEEEEEEEEEEEEEEEEEEEEE
+    -->
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Lucas Everett's Apps</a></h1>
+      <a href="https://github.com/lucaseverett/" target="_blank"
+        ><img src={githubBrands} alt="Lucas Everett's GitHub Profile" />
+      </a>
+    </header>
+    <slot />
+  </body>
+</html>
